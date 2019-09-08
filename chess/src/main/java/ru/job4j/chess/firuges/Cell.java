@@ -17,4 +17,15 @@ public enum Cell {
         this.x = x;
         this.y = y;
     }
+
+    public  Cell getCell(int xPosition, int yPosition){
+        Cell result = null;
+        for(Cell cell : Cell.values()){
+            if(cell.x == xPosition && cell.y == yPosition){
+                result = cell;
+                break;
+            }
+        }
+        return result;
+    }
 }
